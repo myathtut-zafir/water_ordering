@@ -24,7 +24,7 @@ class Home extends Component {
                                 အမှတ် {orderData[item].houseNumber} | {orderData[item].street} လမ်း |
                                 {orderData[item].ward} ရပ်ကွက် | {orderData[item].township} မြို့နယ် </p>
                             <a href="#" className="card-link">Accept Order</a>
-                            <a href="#" className="card-link">Reject Accept</a>
+                            <a href="#" className="card-link">Report Order</a>
                         </div>
                     </div>
                 </div>
