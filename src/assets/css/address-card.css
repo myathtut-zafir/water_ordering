@@ -1,0 +1,36 @@
+
+  .address-card{
+    display: flex;
+    flex-direction: column;
+    height:100%;
+    width:100%;
+  }
+
+  .address-card .address{
+    height:46%;
+    padding:20px 10px 10px;
+  }
+
+  .address-card .phone-numbers{
+    height:23%;
+    text-align: right;
+    padding-right:30px;
+    list-style: none;
+
+  }
+
+
+  .address-card .edit-address{
+    height:20%;
+    background-color:#006f5f;
+    
+  }
+
+  .address-card .edit-address a{
+    color:#fff;
+  }
+
+  .address-card .phone-icon{
+    color:#00695A;
+    transform: rotate(90deg);
+  }

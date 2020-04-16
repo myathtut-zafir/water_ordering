@@ -1,0 +1,101 @@
+/*@import "~bootstrap/dist/css/bootstrap.css";*/
+.drname-margin {
+    margin: 10px
+}
+
+.speciality-wrap {
+    background: #6D6D6D;
+    padding-left: 7px;
+}
+
+.speciality {
+    color: white;
+    font-size: 12px;
+}
+
+.ais-wrap {
+    margin: 3px;
+    margin-top: 15px;
+}
+
+.schdule-wrap {
+    background: #3A99D8;
+    margin: 1px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.schdule-text {
+    text-align: center;
+}
+
+.total-booking-count {
+    font-size: 0.7em;
+    color: #BA762B
+}
+
+.total-booking-text {
+    margin: 2px;
+    margin-top: 5px;
+    margin-bottom: 7px;
+}
+
+.btn-color {
+    background-color: teal;
+}
+
+.body-background-booking {
+    background-color: white;
+}
+
+.show-booking-text-padding {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.border-booking-info {
+    border: 1px solid #0b2e13;
+}
+
+.booking-info-padding {
+    margin: 1px;
+}
+
+.booking-info-text-size {
+    font-size: 0.9rem;
+    padding: 5px;
+}
+
+/*@media screen and (max-width: 1000px) {*/
+/*.container {*/
+/*padding-right:0 !important;*/
+/*padding-left:0 !important;*/
+/*max-width: initial !important;*/
+/*}*/
+/*}*/
+body {
+    background: white !important;
+}
+
+.padding-booking-no {
+    padding-top: 20px;
+}
+
+.heading-font-size {
+    font-size: 7.5rem;
+}
+
+.ais-heading {
+    font-size: 1rem;
+}
+
+.booking-number-text {
+    color: #BA762B
+}
+
+.booking-summery-info {
+    text-align: justify;
+}
+.button-pad{
+    padding-top: 12px;
+}

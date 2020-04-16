@@ -1,0 +1,327 @@
+#main-grid {
+  display: grid;
+  grid-template-columns: repeat(13, 1fr);
+  color: #444;
+  /* max-width: 1000px; */
+  /* margin: 0 auto; */
+  margin: 8px 9px 10px 13px;
+}
+#main-grid > div:not(:first-child) {
+  margin-top: 10px;
+}
+#main-grid .mb-shadow {
+  box-shadow: 2px 2px 3px #000;
+}
+#main-grid > div:first-child {
+  grid-column: 1/13;
+}
+
+#main-grid div#hospital-banner {
+  grid-column: 1/10;
+}
+#main-grid div#hospital-address {
+  grid-column: 10/14;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-left: 20px;
+  background-color: #fff;
+  box-shadow: 2px 2px 3px #000;
+}
+
+#main-grid div#patient-graph {
+  margin-top: 10px;
+margin-right: 12px;
+grid-column: 1/12;
+background-color: #fff;
+height: 280px;
+}
+
+#main-grid > div#appointment-calendar {
+  grid-column: 12/13;
+  margin-left: 0px;
+  /* background-color:#fff;   */
+}
+
+div#appointment-calendar .react-calendar {
+  box-shadow: 2px 2px 3px #000;
+  border: 2px solid #00695a;
+}
+
+#main-grid > div:nth-child(6) {
+  grid-column: 1/9;
+  /* margin-right: 10px; */
+}
+
+#main-grid > div:nth-child(7) {
+  margin-left: 10px;
+  grid-column: 9/14;
+}
+
+#main-grid > div:nth-child(8) {
+  grid-column: 1/14;
+}
+
+#main-grid > div:nth-child(9) {
+  grid-column: 1/14;
+}
+
+#main-grid > div:nth-child(10) {
+  grid-column: 1/14;
+}
+
+#main-grid .count-display {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  position: relative;
+  justify-content: center;
+}
+
+#main-grid .count-display::after {
+  position: absolute;
+  top: -4px;
+  right: 0px;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 7px solid #00695a;
+  transform: rotate(-45deg);
+  content: " ";
+}
+
+#main-grid a:hover .count-display {
+  text-decoration: none;
+}
+
+#main-grid .count-display .text {
+  font-size: 14px;
+  font-weight: bold;
+  color: #444;
+  margin-top: 24px;
+}
+
+#main-grid .count-display .count {
+  font-size: 50px;
+  color: #006f5f;
+  padding-top: 10px;
+  margin-right: 20px;
+  text-align: right;
+}
+
+#count-list {
+  display: flex;
+  background-color: #fff;
+}
+#main-grid a {
+  width: 100%;
+}
+#main-grid a .count-display-circle {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  width: 100%;
+}
+
+#main-grid a:last-child .count-display-circle {
+  background-color: #006f5f;
+  color: #fff;
+  border-radius: 7px 0px 0px 7px;
+}
+
+#main-grid a:first-child .count-display-circle::after {
+  position: absolute;
+  right: 0px;
+  top: 20%;
+  height: 60%;
+  border-right: 1px solid #000;
+  content: " ";
+}
+
+#main-grid .count-display-circle .text {
+  text-align: right;
+  margin-right: 15px;
+  font-weight: bold;
+  color: #444;
+}
+
+
+#main-grid .count-display-circle .count {
+  font-size: 18px;
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  color: #000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+#main-grid a:last-child .count-display-circle .count {
+  background-color: #fff;
+  border: none;
+  color: #006f5f;
+}
+
+
+/* #main-grid a:hover .count-display-circle .count{
+    background-color:#0bbaa1;
+    color:#fff;    
+  } */
+#main-grid a:hover .count-display-circle {
+  background-color: #006f5f;
+  color: #fff;
+}
+  /* #main-grid a:hover .count-display-circle .count{
+    background-color:#0bbaa1;
+    color:#fff;    
+  } */
+  #main-grid a:hover .count-display-circle{
+    background-color:#006f5f;
+    color:#fff;
+  }
+
+#main-grid a:last-child .count-display-circle .text {
+  color: #fff;
+}
+
+#main-grid a:hover {
+  text-decoration: none;
+}
+
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0px;
+}
+
+.btn-mb {
+  background-color: #006f5f;
+  color: #fff;
+  border: none;
+  padding: 7px 15px 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-mb:hover {
+  background-color: #0bbaa1;
+}
+
+.search-form .btn.btn-secondary {
+  background-color: #00695a;
+}
+
+.graph-title {
+  text-align: center;
+  padding: 10px;
+  color: #006f5f;
+  font-weight: bold;
+}
+
+.pagination {
+  color: #00695a;
+}
+
+.pagination li button {
+  color: #00695a;
+}
+
+.page-link {
+  color: #00695a;
+}
+.page-link[style="background-color: rgb(0, 123, 255);"] {
+  background-color: #00695a !important;
+  color: #fff;
+}
+
+.speciality-list .card.mb-3 {
+  background: none;
+  border: none;
+}
+
+.speciality-list .card-header {
+  width: 110px;
+  background-color: #fff;
+  border: none;
+}
+
+.speciality-list tbody tr:hover {
+  color: #fff;
+  background-color: #00695a;
+}
+.card-body {
+  background-color: #fff;
+  border-radius: 0px 5px 5px 5px;
+  box-shadow: 2px 2px 3px #000;
+}
+.nested {
+  grid-row: row 2;
+  display: grid !important;
+  grid-gap: 10px;
+  grid-template-columns: repeat(6, 1fr);
+}
+.item {
+  grid-column: 3 / 6;
+  grid-row: 1;
+}
+  #main-grid a:hover .count-display-circle{
+    background-color:#006f5f;
+    color:#fff;
+  }
+
+.item2 {
+  grid-column: 3 / 6;
+  grid-row: 2;
+  margin-left: 20px;
+  display: flex;
+}
+
+  .card-body{
+    background-color:#fff;
+    border-radius: 0px 5px 5px 5px;
+    box-shadow: 2px 2px 3px #000;
+  }
+
+  .btn-primary {
+    color: #fff;
+    background-color: #00695A;
+    border-color: #00695A;
+
+}
+
+.hrLine {
+  width: 140%;
+  height: 1px;
+  margin-left: -74px;
+  background-color: #666;
+  margin-top: 12px
+}
+
+#main-grid .nested:first-child .item::after {
+  position: absolute;
+    left: 46%;
+    top: 20%;
+    height: 71px;
+    border-right: 1px solid #000;
+    content: " ";
+}
+.btn-primary {
+  color: #fff;
+  background-color: #00695A;
+  border-color: #00695A;
+}
+
+.btn-primary:hover {
+color: #fff;
+background-color: #00695A;
+border-color: #00695A;
+}
+
+
+
