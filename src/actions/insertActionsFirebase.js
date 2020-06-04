@@ -1,15 +1,29 @@
 import fbConfig from "../config/fbConfig"
 import * as firebase from "firebase";
 
-let fbRef = firebase.database().ref("/messages/");
+let fbRefOrders = firebase.database().ref("/orders/");
+let fbRefTotalOrder = firebase.database().ref("/total_order/");
+
 export const insert = (data) => dispatch => {
-    fbRef.push(data);
-}
+    fbRefOrders.push(data);
+};
+
 export const fetchOrder = () => dispatch => {
 
-    fbRef.orderByKey().once("value", snapshot => {
+    fbRefOrders.orderByKey().once("value", snapshot => {
         dispatch({
             type: "FETCH_ORDER",
+            payload: snapshot.val()
+        });
+    });
+};
+
+export const fetchOrderCount = () => dispatch => {
+
+    fbRefTotalOrder.orderByKey().once("value", snapshot => {
+        console.log(snapshot.val());
+        dispatch({
+            type: "FETCH_ORDER_COUNT",
             payload: snapshot.val()
         });
     });

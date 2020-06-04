@@ -68,7 +68,8 @@ class Form extends Component {
                             <div className="form-group">
                                 <label htmlFor="exampleInputEmail1">တိုက်အမှတ် </label>
                                 <input type="text" className="form-control" id="phoneNumber"
-                                       aria-describedby="emailHelp" placeholder="Enter..." ref={this.buildingNumberRef}/>
+                                       aria-describedby="emailHelp" placeholder="Enter..."
+                                       ref={this.buildingNumberRef}/>
                             </div>
                             <div className="form-group">
                                 <label htmlFor="exampleInputEmail1">အိမ်နံပတ် </label>

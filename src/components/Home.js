@@ -1,15 +1,17 @@
 import React, {Component} from "react";
-import {fetchOrder} from "../actions/insertActionsFirebase";
+import {fetchOrder, fetchOrderCount} from "../actions/insertActionsFirebase";
 import {connect} from "react-redux";
 
 class Home extends Component {
 
     componentWillMount() {
         this.props.fetchOrder();
+        this.props.fetchOrderCount();
     }
 
     render() {
         let orderData = this.props.orders;
+        let orderCountData = this.props.orderCount;
 
         let showOrderData = orderData !== undefined && orderData !== {}
             ? Object.keys(orderData).map((item, index) => (
@@ -19,7 +21,8 @@ class Home extends Component {
                             <h5 className="card-title">{orderData[item].name}</h5>
                             <h6 className="card-subtitle mb-2 text-muted">{orderData[item].brand} - {orderData[item].order_amount} ဗူး
                                 လိုအပ်ပါသည်။</h6>
-                            <p className="card-text">phone - {orderData[item].brand}</p>
+                            <p className="card-text">brand - {orderData[item].brand}</p>
+                            <p className="card-text">phone - {orderData[item].phoneNumber}</p>
                             <p className="card-text">ပို့ဆောင်ရမည် လိပ်စာ -
                                 အမှတ် {orderData[item].houseNumber} | {orderData[item].street} လမ်း |
                                 {orderData[item].ward} ရပ်ကွက် | {orderData[item].township} မြို့နယ် </p>
@@ -29,11 +32,12 @@ class Home extends Component {
                     </div>
                 </div>
             )) : "";
+        let orderCount = orderCountData !== undefined && orderCountData !== {}
+            ? orderCountData.order_count : "undefined";
         return (
             <React.Fragment>
-
-                <h1>ရေသန့် order များ</h1>
-
+                <h1>Total Order - {orderCount} ဗူး</h1>
+                <h2>ရေသန့် order များ</h2>
                 <div className="row">
                     {showOrderData}
                 </div>
@@ -46,11 +50,14 @@ class Home extends Component {
 
 const mapStateToProps = state => ({
     orders: state.orders.items,
+    orderCount: state.orders.orderCount,
 });
+
 export default connect(
     mapStateToProps,
     {
         fetchOrder,
+        fetchOrderCount,
     }
 )(Home);
 
